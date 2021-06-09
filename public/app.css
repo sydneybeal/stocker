@@ -1,0 +1,116 @@
+.jumbotron {
+	font-family: 'Lato', sans-serif;
+	border-radius: 0 !important;
+}
+
+.container {
+	font-family: 'Lato', sans-serif;
+}
+
+.div-inline{
+    display:inline-block;
+}
+
+h4.box-title {
+	font-family: 'Exo', sans-serif;
+	font-weight: 600;
+	font-size:  1rem;
+	text-align: left;
+}
+
+.results-box {
+	padding-left: 0px !important;
+}
+
+/*form.searchform {
+	vertical-align: middle;
+}*/
+
+.navbar {
+	background-color: #40916c;
+}
+
+.ticker {
+	color: #40916c;
+	font-family: 'Exo', sans-serif;
+	font-weight: 700;
+}
+
+.yfinance .card {
+	/*background: rgb(64,145,108);*/
+	border: none !important;
+}
+
+.sentiment .card {
+	/*background: rgb(64,145,108);*/
+	border: none !important;
+}
+
+.tweets .card {
+	/*border: 1px solid #40916c !important;*/
+}
+
+button.btn-primary {
+	background-color: #40916c;
+	border-color: #40916c;
+	color: #dee2e6;
+}
+
+button.btn-primary:hover {
+	background-color: #1b4332;
+	border-color: #40916c;
+	color: #dee2e6;
+}
+
+button.btn-alt {
+	background-color: #ffbf69;
+	border-color: #ffbf69;
+	color: #ffbf69;
+}
+
+.border-grid {
+    border: 1px solid #dee2e6!important;
+	height: 100px;
+	display: flex;
+    align-items: center; /* horizontal 
+    justify-content: center; /* vertical */
+}
+
+.card-label {
+	color: #2d3142;
+	font-size: 0.8rem;
+}
+
+.card-text {
+	color: #2d3142;
+	font-size: 1rem;
+	font-weight: light;
+}
+
+#header .display-3 {
+	font-family: 'Exo', sans-serif;
+	font-weight: 700;
+}
+
+.larger {
+	size: 1.2rem;
+}
+
+div#dataGrid {
+	max-width: 500px;
+	margin: 10px auto;
+	/* padding: 50px auto; */
+}
+
+div.wide-padding {
+	padding: 1rem;
+}
+
+div.less-margin {
+	padding: 0;
+}
+
+a.btn-outline-brand {
+    border-color: pink;
+	color: pink;
+}

@@ -1,0 +1,26 @@
+	<div class="container text-center">
+		<h4 class="box-title">
+		Latest Tweets
+		</h4>
+
+		<div class="container tweets results-box">
+			<% for(var i=0;i<10;i++) { %>
+				<div class="shadow-sm card mb-2 bg-white rounded">
+					<div class="card-body">
+						<h5 class="card-title text-left">
+							@<%= twitterData[i].user %>
+						</h5>
+						<hr>
+						<div class="card-text mt-3 text-left">
+							<%= twitterData[i].text %>
+						</div>
+						<div class="card-text mt-3 text-left text-muted small">
+							<%= moment(twitterData[i].createDate).format('lll')  %>
+						</div>
+					</div>
+				</div>
+			<% } %>
+		</div>
+
+		
+	</div>

@@ -1,0 +1,43 @@
+<%- include("partials/header") %>
+
+<!-- <%- include("partials/searchbox") %> -->
+
+<div class="container text-center mt-5">
+	<% if (typeof yfinanceData == 'object' && yfinanceData.hasOwnProperty('summaryDetail')) { %>
+		<div class="container company-info mb-5">
+			<h1 class="ticker"><%= yfinanceData.price.symbol %></h1>
+			<h3><%= yfinanceData.price.longName %></h3>
+		</div>
+	<% } else { %>
+		<div class="container company-info mb-5">
+			<h1 class="ticker">Your search term returned no ticker results</h1>
+		</div>
+	<% } %>
+		<div class="row">
+			<div class="col col-md-8">
+				<% if (typeof twitterData == 'object' && twitterData.length > 0) { %>
+					<%- include("partials/twitterResults",{twitterData: twitterData}) %>
+				<% } else { %>
+					<p> No twitter data in past 7 days </p>
+				<% }%>
+			</div>
+			<div class="col col-md-4">
+				<% if (typeof yfinanceData == 'object' && yfinanceData.hasOwnProperty('summaryDetail')) { %>
+					<%- include("partials/yfinanceResults",{yfinanceData: yfinanceData}) %>
+				<% } else { %>
+					Your search term returned no ticker results
+				<% } %>
+				<br>
+				<% if (typeof twitterData == 'object' && twitterData.length > 0) { %>
+				<%- include("partials/sentimentResults",{twitterData: twitterData}) %>
+				<% } else { %>
+					<p> No twitter data in past 7 days </p>
+				<% }%>
+			</div>
+		<div>
+	
+</div>
+
+
+
+<%- include("partials/footer") %>

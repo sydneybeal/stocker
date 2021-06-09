@@ -1,0 +1,23 @@
+	<div class="container text-center result-box">
+		<h4 class="box-title">
+		Tweet Analysis
+		</h4>
+
+		<div class="container sentiment results-box">
+			<!-- <% //for(var i=0;i<twitterData.length;i++) { %> -->
+				<div class="shadow card mb-2 bg-white rounded">
+					<div class="card-body">
+						<h5 class="card-title text-left">
+							# of tweets, past 3 days: <%= twitterData.length %>
+						</h5>
+						<hr>
+						<div class="card-text mt-3 text-left">
+							Average: <%= Math.round(twitterData.length / 3) %> per day
+						</div>
+					</div>
+				</div>
+			<!-- <% //} %> -->
+		</div>
+
+		
+	</div>

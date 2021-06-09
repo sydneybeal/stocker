@@ -1,0 +1,25 @@
+	<div class="container text-center">
+		<h4 class="box-title">
+		Yahoo Finance Data
+		</h4>
+
+		<div class="container yfinance results-box">
+			<!-- <% //for(var i=0;i<yfinanceData.length;i++) { %> -->
+				<div class="shadow card mb-2 bg-white rounded">
+					<div class="card-body">
+						<h5 class="card-title text-left">
+							Current Price: $<%= yfinanceData.price.regularMarketPrice %>
+						</h5>
+						<hr>
+						<div class="card-text mt-3 text-left">
+							<p>Day Low: $<%= yfinanceData.summaryDetail.dayLow %></p>
+							<p>Day High: $<%= yfinanceData.summaryDetail.dayHigh %></p>
+							<p>Previous Close: $<%= yfinanceData.summaryDetail.previousClose %></p>
+						</div>
+					</div>
+				</div>
+			<!-- <% //} %> -->
+		</div>
+
+		
+	</div>
