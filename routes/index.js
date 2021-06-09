@@ -5,12 +5,13 @@ var moment = require('moment');
 var router = express.Router();
 var twit = require('twit');
 var y = require('yahoo-finance');
+var dotenv = require('dotenv').config('../.env')
 
 var t = new twit({
-  consumer_key:         config.TWITTER.consumer_key,
-  consumer_secret:      config.TWITTER.consumer_secret,
-  access_token:         config.TWITTER.access_token,
-  access_token_secret:  config.TWITTER.access_token_secret,
+  consumer_key:         process.env.CONSUMER_KEY,
+  consumer_secret:      process.env.CONSUMER_SECRET,
+  access_token:         process.env.ACCESS_TOKEN,
+  access_token_secret:  process.env.ACCESS_TOKEN_SECRET,
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
   strictSSL:            true,     // optional - requires SSL certificates to be valid.
 });
