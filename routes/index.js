@@ -5,7 +5,6 @@ var moment = require('moment');
 var router = express.Router();
 var twit = require('twit');
 var y = require('yahoo-finance');
-var dotenv = require('dotenv').config('../.env')
 
 var t = new twit({
   consumer_key:         process.env.CONSUMER_KEY,

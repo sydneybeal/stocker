@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require("body-parser");
 var app = express();
 var path = require('path');
+var dotenv = require('dotenv').config('/.env')
 
 // requiring routes
 var indexRoutes = require("./routes/index");
