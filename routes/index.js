@@ -21,7 +21,7 @@ var max_id;
 
 // Root route
 router.get("/", (req, res) => {
-	res.render("home");
+	res.render("home", {journey: "initial_landing"});
 });
 
 async function getAllTwits(q, count, max_id){
@@ -73,7 +73,10 @@ router.post("/search", (req,res) => {
 
 	var tasks = {
 		twitterData: function (cb) {
-			q = '$' + searchTerm + ' since:2021-06-07 -filter:retweets';
+			var three_days_ago = Date.now() + -3*24*3600*1000;
+			var three_days_ago_format = new Date(three_days_ago).toLocaleDateString('en-CA')
+			console.log("three days ago: " + three_days_ago_format);
+			q = '$' + searchTerm + ' since:' + three_days_ago_format + ' -filter:retweets';
 			count = 100;
 			getAllTwits(q, count, max_id).then(tweets => {
 			    callback(null, tweets, cb);

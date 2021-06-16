@@ -22,6 +22,19 @@ h4.box-title {
 	padding-left: 0px !important;
 }
 
+.yfinance.results-box {
+	padding-left: 0px !important;
+	max-width: 400px;
+	position: fixed;
+}
+
+.sentiment.results-box {
+	padding-left: 0px !important;
+	max-width: 400px;
+	position: fixed;
+	margin-top:250px
+}
+
 /*form.searchform {
 	vertical-align: middle;
 }*/
